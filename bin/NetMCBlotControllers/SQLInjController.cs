@@ -18,26 +18,33 @@ namespace NETMVCBlot.Controllers
             using (ObjectContext studentContext = new ObjectContext("name=StudentEntities"))
             {
                 // CTSECISSUE: SQLInjection
-                studentContext.CreateQuery<Student>("select * from students " + input);
+                string query = "SELECT VALUE s FROM Students AS s WHERE s.SomeColumn = @inputValue";
+                var parameter = new ObjectParameter("inputValue", input);
 
+                var result = studentContext.CreateQuery<Student>(query, parameter);
                 // CTSECISSUE: SQLInjection
-                studentContext.ExecuteStoreCommand("select * from students " + input);
-
+                string command = "SELECT * FROM Students WHERE SomeColumn = @inputValue";
+                studentContext.ExecuteStoreCommand(command,
+                    new SqlParameter("@inputValue", input));
                 // CTSECISSUE: SQLInjection
-                studentContext.ExecuteStoreQuery<Student>("select * from students " + input);
-
+                string query = "SELECT * FROM Students WHERE SomeColumn = @inputValue";
+                var students = studentContext.ExecuteStoreQuery<Student>(query,
+                    new SqlParameter("@inputValue", input)).ToList();
                 // CTSECISSUE: SQLInjection
-                studentContext.ExecuteStoreQuery<Student>("select * from students " + input, "", MergeOption.AppendOnly);
+                string query = "SELECT * FROM Students WHERE SomeColumn = @inputValue";
+                var students = studentContext.ExecuteStoreQuery<Student>(query,
+                    new SqlParameter("@inputValue", input),
+                    MergeOption.AppendOnly).ToList();
             }
 
-            FullTextSqlQuery myQuery = new FullTextSqlQuery(SPContext.Current.Site)
+            KeywordQuery keywordQuery = new KeywordQuery(SPContext.Current.Site)
             {
-                // CTSECISSUE: SQLInjection
-                QueryText = "SELECT Path FROM SCOPE() WHERE  \"SCOPE\" = '" + input + "'",
-                ResultTypes = ResultType.RelevantResults
-
+                QueryText = "SELECT Path FROM SCOPE() WHERE \"SCOPE\" = @inputValue",
             };
+            keywordQuery.QueryText += " WHERE \"SCOPE\" = @inputValue";
+            keywordQuery.QueryParameters.Add("@inputValue", input);
 
+            FullTextSqlQuery myQuery = keywordQuery.GetFullTextSqlQuery();
             return View();
         }
     }
