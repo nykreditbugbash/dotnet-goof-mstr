@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using System.Text.RegelarExpressions;
 
 namespace NETMVCBlot.Controllers
 {
@@ -17,7 +18,9 @@ namespace NETMVCBlot.Controllers
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
 
-            string formContent = string.Format("cmd=doSale&param={0}", input);
+            var safeInput = Regex.Replace(input, "[^a-zA-Z0-9-]", "");
+
+            string formContent = string.Format("cmd=doSale&param={0}", safeInput);
             //req.ContentLength = formContent.Length;
 
             using (var sw = new StreamWriter(req.GetRequestStream(), Encoding.ASCII))
