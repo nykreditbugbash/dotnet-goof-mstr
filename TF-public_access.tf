@@ -1,5 +1,5 @@
 resource "aws_db_instance" "db" {
-  publicly_accessible  = true
+  publicly_accessible  = false
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "mysql"
@@ -20,7 +20,7 @@ resource "aws_dms_replication_instance" "db" {
   kms_key_arn                  = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
   multi_az                     = false
   preferred_maintenance_window = "sun:10:30-sun:14:30"
-  publicly_accessible          = true
+  publicly_accessible          = false
   replication_instance_class   = "dms.t2.micro"
   replication_instance_id      = "test-dms-replication-instance-tf"
   replication_subnet_group_id  = aws_dms_replication_subnet_group.test-dms-replication-subnet-group-tf.id
@@ -36,7 +36,7 @@ resource "aws_dms_replication_instance" "db" {
 
 resource "aws_docdb_cluster_instance" "docdb" {
   count              = 2
-  publicly_accessible = true
+  publicly_accessible = false
   identifier         = "docdb-cluster-demo-${count.index}"
   cluster_identifier = aws_docdb_cluster.default.id
   instance_class     = "db.r5.large"
@@ -55,7 +55,7 @@ resource "aws_mq_broker" "mq" {
   host_instance_type = "mq.t2.micro"
   security_groups    = [aws_security_group.test.id]
 
-  publicly_accessible = true
+  publicly_accessible = false
 
   user {
     username = "ExampleUser"
@@ -65,7 +65,7 @@ resource "aws_mq_broker" "mq" {
 
 resource "aws_neptune_cluster_instance" "neptune" {
   count              = 2
-  publicly_accessible = true
+  publicly_accessible = false
   cluster_identifier = aws_neptune_cluster.default.id
   engine             = "neptune"
   instance_class     = "db.r4.large"
@@ -79,7 +79,7 @@ resource "aws_rds_cluster_instance" "rds" {
   instance_class     = "db.r4.large"
   engine             = aws_rds_cluster.default.engine
   engine_version     = aws_rds_cluster.default.engine_version
-  publicly_accessible = true
+  publicly_accessible = false
 }
 
 resource "aws_redshift_cluster" "redshift" {
@@ -89,5 +89,5 @@ resource "aws_redshift_cluster" "redshift" {
   master_password    = "Mustbe8characters"
   node_type          = "dc1.large"
   cluster_type       = "single-node"
-  publicly_accessible = true
+  publicly_accessible = false
 }
