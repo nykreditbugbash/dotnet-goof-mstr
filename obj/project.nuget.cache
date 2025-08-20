@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J8o9Mn46l2M=",
+  "dgSpecHash": "IIF8xccKKMg=",
   "success": false,
   "projectFilePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
   "expectedPackageFiles": [
@@ -34,8 +34,8 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.4\\microsoft.aspnet.identity.owin.2.2.4.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.14\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.14.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.0.0\\microsoft.aspnetcore.app.runtime.win-x86.3.0.0.nupkg.sha512",
+    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.15\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.15.nupkg.sha512",
+    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.27\\microsoft.aspnetcore.app.runtime.win-x86.6.0.27.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.1.2\\microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\2.1.1\\microsoft.aspnetcore.razor.language.2.1.1.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.0\\microsoft.azure.cognitiveservices.vision.computervision.7.0.0.nupkg.sha512",
@@ -310,67 +310,7 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-25c8-p796-jg6r",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-3rq8-h3gj-r5c6",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-485p-mrj5-8w2v",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cw98-9j8w-wxv9",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-fcg8-mg9g-6hc4",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1904",
-      "level": "Warning",
-      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 3.0.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-g74q-5xw3-j7q9",
+      "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 6.0.27 has a known high severity vulnerability, https://github.com/advisories/GHSA-2865-hh9g-w894",
       "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",

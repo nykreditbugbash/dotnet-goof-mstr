@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotNet-goof")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d149424e1e64f06c437b3f22820c37429e01f481")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c49933dc7addccbecb247c48e4c7a579d27b42c")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotNet-goof")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotNet-goof")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

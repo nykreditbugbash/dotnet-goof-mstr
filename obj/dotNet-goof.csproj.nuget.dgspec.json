@@ -184,11 +184,11 @@
             },
             "microsoft.aspnetcore.app.runtime.linux-x64": {
               "target": "Package",
-              "version": "[8.0.14, )"
+              "version": "[8.0.15, )"
             },
             "microsoft.aspnetcore.app.runtime.win-x86": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[6.0.27, )"
             },
             "opcfoundation.netstandard.opc.ua4": {
               "target": "Package",
