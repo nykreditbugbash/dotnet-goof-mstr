@@ -18,7 +18,9 @@ namespace NETMVCBlot.Controllers
             using (ObjectContext studentContext = new ObjectContext("name=StudentEntities"))
             {
                 // CTSECISSUE: SQLInjection
-                studentContext.CreateQuery<Student>("select * from students " + input);
+                studentContext.CreateQuery<Student>("select * from students where input=@input");
+                new SqlPramater("@input", input);
+
 
                 // CTSECISSUE: SQLInjection
                 studentContext.ExecuteStoreCommand("select * from students " + input);
