@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IIF8xccKKMg=",
+  "dgSpecHash": "8UcD11p/uLc=",
   "success": false,
   "projectFilePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,6 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\maxmind.geoip2\\3.2.0\\maxmind.geoip2.3.2.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.2\\microsoft.aspnet.identity.core.2.2.2.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.2\\microsoft.aspnet.identity.entityframework.2.2.2.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.4\\microsoft.aspnet.identity.owin.2.2.4.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.15\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.15.nupkg.sha512",
@@ -87,10 +86,6 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.netframework.analyzers\\2.9.3\\microsoft.netframework.analyzers.2.9.3.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.owin\\3.0.1\\microsoft.owin.3.0.1.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.owin.security\\3.0.1\\microsoft.owin.security.3.0.1.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.owin.security.oauth\\3.0.1\\microsoft.owin.security.oauth.3.0.1.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.powershell.coreclr.eventing\\6.1.6\\microsoft.powershell.coreclr.eventing.6.1.6.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.powershell.native\\6.1.0\\microsoft.powershell.native.6.1.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\microsoft.rest.clientruntime.2.3.24.nupkg.sha512",
@@ -120,7 +115,6 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\nuget.frameworks\\5.11.6\\nuget.frameworks.5.11.6.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\nuget.packaging\\5.11.6\\nuget.packaging.5.11.6.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\nuget.versioning\\5.11.6\\nuget.versioning.5.11.6.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\powershell\\7.2.18\\powershell.7.2.18.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\premailer.net\\2.2.0\\premailer.net.2.2.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\remotion.linq\\2.2.0\\remotion.linq.2.2.0.nupkg.sha512",
@@ -163,7 +157,7 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\system.composition.hosting\\1.0.31\\system.composition.hosting.1.0.31.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.composition.runtime\\1.0.31\\system.composition.runtime.1.0.31.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.composition.typedparts\\1.0.31\\system.composition.typedparts.1.0.31.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\MSTR\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.1\\system.configuration.configurationmanager.8.0.1.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.data.hashfunction.core\\2.0.0\\system.data.hashfunction.core.2.0.0.nupkg.sha512",
@@ -222,7 +216,7 @@
     "C:\\Users\\MSTR\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
-    "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime.caching\\8.0.0\\system.runtime.caching.8.0.0.nupkg.sha512",
+    "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime.caching\\8.0.1\\system.runtime.caching.8.0.1.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime.compilerservices.visualc\\4.3.0\\system.runtime.compilerservices.visualc.4.3.0.nupkg.sha512",
     "C:\\Users\\MSTR\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
@@ -308,6 +302,17 @@
       ]
     },
     {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNet.Identity.Owin with version (>= 3.0.1)\r\n  - Found 14 version(s) in nuget.org [ Nearest version: 2.2.4 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages\r\n  - Found 0 version(s) in DevExpress 22.2 Local\r\n  - Found 0 version(s) in C:\\Program Files\\dotnet\\library-packs\r\n  - Found 0 version(s) in Nexus Nykredit NuGet Packages",
+      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
+      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
+      "libraryId": "Microsoft.AspNet.Identity.Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.AspNetCore.App.Runtime.win-x86' 6.0.27 has a known high severity vulnerability, https://github.com/advisories/GHSA-2865-hh9g-w894",
@@ -382,18 +387,6 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Microsoft.AspNet.Identity.Owin 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNet.Identity.Owin",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
       "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "warningLevel": 1,
@@ -418,66 +411,6 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'Microsoft.Owin 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.Owin",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Owin.Security 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.Owin.Security",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Owin.Security.Cookies 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.Owin.Security.Cookies",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Owin.Security.OAuth 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.Owin.Security.OAuth",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Owin",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
       "message": "Package 'System.Linq.Dynamic 1.0.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "warningLevel": 1,
@@ -494,17 +427,6 @@
       "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "libraryId": "Microsoft.Win32.Registry",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.AspNet.Identity.Core from 2.2.4 to 2.2.2. Reference the package directly from the project to select a different version. \r\n dotNet-goof -> Microsoft.AspNet.Identity.Owin 2.2.4 -> Microsoft.AspNet.Identity.Core (>= 2.2.4) \r\n dotNet-goof -> Microsoft.AspNet.Identity.Core (>= 2.2.2)",
-      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "filePath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
-      "libraryId": "Microsoft.AspNet.Identity.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
