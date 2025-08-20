@@ -1,0 +1,6 @@
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.csproj.AssemblyReference.cache
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.AssemblyInfoInputs.cache
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.AssemblyInfo.cs
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.csproj.CoreCompileInputs.cache
+C:\Users\MSTR\Snyk\dotnet-goof-mstr\second\obj\Debug\netcoreapp2.2\dotnet-goof-second.sourcelink.json
