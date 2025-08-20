@@ -176,15 +176,15 @@
             },
             "kentico.xperience.libraries": {
               "target": "Package",
-              "version": "[13.0.173, )"
+              "version": "[8.0.1, )"
             },
             "log4net": {
               "target": "Package",
-              "version": "[2.0.8, )"
+              "version": "[2.0.10, )"
             },
             "microsoft.aspnetcore.app.runtime.linux-x64": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.14, )"
             },
             "microsoft.aspnetcore.app.runtime.win-x86": {
               "target": "Package",
