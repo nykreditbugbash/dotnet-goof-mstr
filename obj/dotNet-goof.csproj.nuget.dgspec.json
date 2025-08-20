@@ -176,7 +176,7 @@
             },
             "kentico.xperience.libraries": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[13.0.181, )"
             },
             "log4net": {
               "target": "Package",

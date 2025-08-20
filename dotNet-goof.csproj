@@ -44,7 +44,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
-    <PackageReference Include="kentico.xperience.libraries" Version="8.0.1" />
+    <PackageReference Include="kentico.xperience.libraries" Version="13.0.181" />
     <PackageReference Include="youtubedlsharp" Version="1.2.2" />
     <PackageReference Include="dotnetnuke.core" Version="10.0.1" />
     <PackageReference Include="microsoft.aspnetcore.app.runtime.linux-x64" Version="8.0.14" />
