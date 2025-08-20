@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet-goof-second")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04c9a16daa10205396c6b2b15b176180bb0b9761")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa1f71f5340cdae1a32e74bfb0e7410da3594bf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet-goof-second")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet-goof-second")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

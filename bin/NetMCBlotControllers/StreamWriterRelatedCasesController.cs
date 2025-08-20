@@ -31,7 +31,7 @@ namespace NETMVCBlot.Controllers
             using (var sr = new StreamReader(req.GetResponse().GetResponseStream()))
                 response = sr.ReadToEnd();
 
-            string formContent2 = string.Format("cmd=doSale&param={0}", input);
+            string formContent2 = string.Format("cmd=doSale&param={0}", safeInput);
             // CTSECISSUE: HTTP Parameter Pollution (HPP)
             var req2 = (HttpWebRequest)WebRequest.Create("https://www.codethreat.com/index/?" + formContent2);
             req2.Method = "GET";
@@ -41,7 +41,7 @@ namespace NETMVCBlot.Controllers
                 response2 = sr.ReadToEnd();
 
             // CTSECISSUE: Server Side Request Forgery (SSRF)
-            var req3 = (HttpWebRequest)WebRequest.Create(input);
+            var req3 = (HttpWebRequest)WebRequest.Create(safeInput);
             req3.Method = "GET";
 
             string response3 = null;
@@ -53,21 +53,21 @@ namespace NETMVCBlot.Controllers
             req4.Method = "POST";
             req4.ContentType = "application/x-www-form-urlencoded";
 
-            string formContent4 = string.Format("cmd=doSale&param={0}", input);
+            string formContent4 = string.Format("cmd=doSale&param={0}", safeInput);
             req4.ContentLength = 30;
 
-            using (var sw = new StreamWriter(input))
+            using (var sw = new StreamWriter(safeInput))
                 // CTSECISSUE: Insecure File Upload
                 sw.Write(formContent4);
 
             using (var process = new System.Diagnostics.Process())
             {
-                process.StartInfo.RedirectStandardInput = true;
+                process.StartInfo.RedirectStandardsafeInput = true;
                 process.Start();
                 using (StreamWriter writer = process.StandardInput)
                 {
                     // CTSECISSUE: Command Injection
-                    writer.WriteLine(input);
+                    writer.WriteLine(safeInput);
                 }
             }
 
