@@ -30,7 +30,7 @@ spec:
         hostnames:
         - "foo.remote"
         - "bar.remote"
-      hostPID: true
+      hostPID: false
       containers:
         - name: snyky1
           image: "garethr/snyky1:latest"
