@@ -4661,21 +4661,8 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Runtime.Serialization.Formatters/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll": {}
-        }
+      "System.Runtime.Serialization.Formatters/9.0.0": {
+        "type": "package"
       },
       "System.Runtime.Serialization.Primitives/4.3.0": {
         "type": "package",
@@ -14281,33 +14268,22 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+    "System.Runtime.Serialization.Formatters/9.0.0": {
+      "sha512": "0W36/lajD3CM4QNaFydAz9clH+bHulOsAU2Zo0lblzfxwW0xXNolUc9BQCCaIk98ISZle+YVyjbjX29fe4CLmA==",
       "type": "package",
-      "path": "system.runtime.serialization.formatters/4.3.0",
+      "path": "system.runtime.serialization.formatters/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Runtime.Serialization.Formatters.dll",
-        "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Runtime.Serialization.Formatters.dll",
-        "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
-        "system.runtime.serialization.formatters.nuspec"
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/System.Runtime.Serialization.Formatters.dll",
+        "lib/net8.0/System.Runtime.Serialization.Formatters.xml",
+        "system.runtime.serialization.formatters.9.0.0.nupkg.sha512",
+        "system.runtime.serialization.formatters.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
@@ -16744,7 +16720,7 @@
       "System.DirectoryServices.Protocols >= 5.0.1",
       "System.Linq.Dynamic >= 1.0.8",
       "System.Management.Automation >= 6.1.6",
-      "System.Runtime.Serialization.Formatters >= 4.3.0",
+      "System.Runtime.Serialization.Formatters >= 4.3.1",
       "WindowsAzure.Storage >= 9.3.3",
       "Xamarin.Forms >= 4.5.0.617",
       "csla >= 5.5.4",
@@ -16915,7 +16891,7 @@
           },
           "System.Runtime.Serialization.Formatters": {
             "target": "Package",
-            "version": "[4.3.0, )"
+            "version": "[4.3.1, )"
           },
           "WindowsAzure.Storage": {
             "target": "Package",
@@ -17016,6 +16992,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "dotNet-goof depends on System.Runtime.Serialization.Formatters (>= 4.3.1) but System.Runtime.Serialization.Formatters 4.3.1 was not found. System.Runtime.Serialization.Formatters 9.0.0 was resolved instead.",
+      "libraryId": "System.Runtime.Serialization.Formatters",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1102",
       "level": "Error",
