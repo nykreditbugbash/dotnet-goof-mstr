@@ -84,6 +84,4 @@ spec:
           hostPath:
             path: /dev/
         - name: dockersock
-          hostPath:
-            path: /var/run/docker.sock  
             
