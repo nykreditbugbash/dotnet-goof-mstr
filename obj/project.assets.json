@@ -104,10 +104,11 @@
           }
         }
       },
-      "Azure.Storage.Common/12.8.0": {
+      "Azure.Storage.Common/12.12.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.15.0"
+          "Azure.Core": "1.25.0",
+          "System.IO.Hashing": "6.0.0"
         },
         "compile": {
           "lib/netstandard2.0/Azure.Storage.Common.dll": {
@@ -120,20 +121,20 @@
           }
         }
       },
-      "Azure.Storage.Queues/12.7.0": {
+      "Azure.Storage.Queues/12.11.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Storage.Common": "12.8.0",
+          "Azure.Storage.Common": "12.12.0",
           "System.Memory.Data": "1.0.2",
-          "System.Text.Json": "4.6.0"
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
-          "lib/netstandard2.0/Azure.Storage.Queues.dll": {
+          "lib/netstandard2.1/Azure.Storage.Queues.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Azure.Storage.Queues.dll": {
+          "lib/netstandard2.1/Azure.Storage.Queues.dll": {
             "related": ".xml"
           }
         }
@@ -279,15 +280,42 @@
           }
         }
       },
-      "DotNetNuke.Core/7.4.0.353": {
+      "DotNetNuke.Core/10.0.1": {
         "type": "package",
+        "dependencies": {
+          "DotNetNuke.DependencyInjection": "10.0.1"
+        },
         "compile": {
-          "lib/net40/DotNetNuke.dll": {},
-          "lib/net40/Microsoft.ApplicationBlocks.Data.dll": {}
+          "lib/net48/DotNetNuke.dll": {},
+          "lib/net48/Microsoft.ApplicationBlocks.Data.dll": {}
         },
         "runtime": {
-          "lib/net40/DotNetNuke.dll": {},
-          "lib/net40/Microsoft.ApplicationBlocks.Data.dll": {}
+          "lib/net48/DotNetNuke.dll": {},
+          "lib/net48/Microsoft.ApplicationBlocks.Data.dll": {}
+        }
+      },
+      "DotNetNuke.DependencyInjection/10.0.1": {
+        "type": "package",
+        "dependencies": {
+          "DotNetNuke.Instrumentation": "10.0.1",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DotNetNuke.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DotNetNuke.DependencyInjection.dll": {}
+        }
+      },
+      "DotNetNuke.Instrumentation/10.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net48/DotNetNuke.Instrumentation.dll": {},
+          "lib/net48/DotNetNuke.Log4Net.dll": {}
+        },
+        "runtime": {
+          "lib/net48/DotNetNuke.Instrumentation.dll": {},
+          "lib/net48/DotNetNuke.Log4Net.dll": {}
         }
       },
       "EntityFramework/6.2.0": {
@@ -913,10 +941,10 @@
           }
         }
       },
-      "Microsoft.AspNet.Identity.Owin/2.2.2": {
+      "Microsoft.AspNet.Identity.Owin/2.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.2",
+          "Microsoft.AspNet.Identity.Core": "2.2.4",
           "Microsoft.Owin.Security": "3.0.1",
           "Microsoft.Owin.Security.Cookies": "3.0.1",
           "Microsoft.Owin.Security.OAuth": "3.0.1"
@@ -1998,33 +2026,39 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.9": {
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.9"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.9": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets": {}
         }
       },
       "Microsoft.Extensions.FileProviders.Abstractions/3.1.8": {
@@ -2482,7 +2516,7 @@
           "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
-      "Microsoft.NETCore.Platforms/3.0.0": {
+      "Microsoft.NETCore.Platforms/5.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -2576,46 +2610,46 @@
           }
         }
       },
-      "Microsoft.PowerShell.CoreCLR.Eventing/6.1.0": {
+      "Microsoft.PowerShell.CoreCLR.Eventing/6.1.6": {
         "type": "package",
         "dependencies": {
-          "System.Security.Principal.Windows": "4.5.0"
+          "System.Security.Principal.Windows": "4.5.1"
         },
         "compile": {
-          "ref/netstandard2.0/System.Management.Automation.dll": {}
+          "ref/netcoreapp2.1/System.Management.Automation.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/linux-arm/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/linux-arm/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "linux-arm"
           },
-          "runtimes/linux-x64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/linux-x64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "linux-x64"
           },
-          "runtimes/osx/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/osx/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "osx"
           },
-          "runtimes/win-arm/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/win-arm/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "win-arm"
           },
-          "runtimes/win-arm64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/win-arm64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "win-arm64"
           },
-          "runtimes/win-x64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/win-x64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "win-x64"
           },
-          "runtimes/win-x86/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
+          "runtimes/win-x86/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll": {
             "assetType": "runtime",
             "rid": "win-x86"
           }
         }
       },
-      "Microsoft.PowerShell.Native/6.1.0-rc.1": {
+      "Microsoft.PowerShell.Native/6.1.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/linux-arm/native/libpsl-native.so": {
@@ -3275,14 +3309,14 @@
           }
         }
       },
-      "NHibernate/5.2.6": {
+      "NHibernate/5.4.9": {
         "type": "package",
         "dependencies": {
           "Antlr3.Runtime": "[3.5.1, 4.0.0)",
           "Iesi.Collections": "[4.0.4, 5.0.0)",
           "Remotion.Linq": "[2.2.0, 3.0.0)",
           "Remotion.Linq.EagerFetching": "[2.2.0, 3.0.0)",
-          "System.Configuration.ConfigurationManager": "4.4.1"
+          "System.Configuration.ConfigurationManager": "4.7.0"
         },
         "compile": {
           "lib/netcoreapp2.0/NHibernate.dll": {
@@ -3499,7 +3533,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Data.SqlClient.sni/4.5.0": {
+      "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -4063,13 +4097,12 @@
           }
         }
       },
-      "System.Data.SqlClient/4.6.1": {
+      "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.Registry": "4.5.0",
-          "System.Security.Principal.Windows": "4.5.0",
-          "System.Text.Encoding.CodePages": "4.5.0",
-          "runtime.native.System.Data.SqlClient.sni": "4.5.0"
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0",
+          "runtime.native.System.Data.SqlClient.sni": "4.7.0"
         },
         "compile": {
           "ref/netcoreapp2.1/System.Data.SqlClient.dll": {
@@ -4077,7 +4110,9 @@
           }
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {}
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
@@ -4349,11 +4384,11 @@
           }
         }
       },
-      "System.DirectoryServices.Protocols/4.5.0": {
+      "System.DirectoryServices.Protocols/5.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.5.0"
+          "Microsoft.NETCore.Platforms": "5.0.4",
+          "System.Security.Principal.Windows": "5.0.0"
         },
         "compile": {
           "ref/netstandard2.0/System.DirectoryServices.Protocols.dll": {
@@ -4361,9 +4396,19 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.DirectoryServices.Protocols.dll": {}
+          "lib/netstandard2.0/System.DirectoryServices.Protocols.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
+          "runtimes/linux/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
           "runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -4648,6 +4693,26 @@
           }
         }
       },
+      "System.IO.Hashing/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.IO.Packaging/4.7.0": {
         "type": "package",
         "compile": {
@@ -4782,12 +4847,12 @@
           }
         }
       },
-      "System.Management.Automation/6.1.0": {
+      "System.Management.Automation/6.1.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.Management.Infrastructure": "1.0.0",
-          "Microsoft.PowerShell.CoreCLR.Eventing": "6.1.0",
-          "Microsoft.PowerShell.Native": "6.1.0-rc.1",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "6.1.6",
+          "Microsoft.PowerShell.Native": "6.1.0",
           "Microsoft.Win32.Registry.AccessControl": "4.5.0",
           "Newtonsoft.Json": "11.0.2",
           "System.Configuration.ConfigurationManager": "4.5.0",
@@ -4795,39 +4860,39 @@
           "System.IO.FileSystem.AccessControl": "4.5.0",
           "System.Management": "4.5.0",
           "System.Security.AccessControl": "4.5.0",
-          "System.Security.Cryptography.Pkcs": "4.5.0",
+          "System.Security.Cryptography.Pkcs": "4.5.2",
           "System.Security.Permissions": "4.5.0",
-          "System.Text.Encoding.CodePages": "4.5.0"
+          "System.Text.Encoding.CodePages": "4.5.1"
         },
         "compile": {
-          "ref/netstandard2.0/System.Management.Automation.dll": {}
+          "ref/netcoreapp2.1/System.Management.Automation.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/linux-arm/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/linux-arm/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "linux-arm"
           },
-          "runtimes/linux-x64/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/linux-x64/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "linux-x64"
           },
-          "runtimes/osx/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/osx/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "osx"
           },
-          "runtimes/win-arm/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/win-arm/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "win-arm"
           },
-          "runtimes/win-arm64/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/win-arm64/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "win-arm64"
           },
-          "runtimes/win-x64/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/win-x64/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "win-x64"
           },
-          "runtimes/win-x86/lib/netstandard2.0/System.Management.Automation.dll": {
+          "runtimes/win-x86/lib/netcoreapp2.1/System.Management.Automation.dll": {
             "assetType": "runtime",
             "rid": "win-x86"
           }
@@ -6577,36 +6642,38 @@
         "lib/netstandard2.0/Azure.Core.xml"
       ]
     },
-    "Azure.Storage.Common/12.8.0": {
-      "sha512": "2nR+kp1UfF+Ib3JHJkFf1VcVkx98ESIXoxUQ751uZ+fPtABAvA4C5JKuwLhksLVfnVMaljQRGS1BhHjrrUoz9g==",
+    "Azure.Storage.Common/12.12.0": {
+      "sha512": "Ms0XsZ/D9Pcudfbqj+rWeCkhx/ITEq8isY0jkor9JFmDAEHsItFa2XrWkzP3vmJU6EsXQrk4snH63HkW/Jksvg==",
       "type": "package",
-      "path": "azure.storage.common/12.8.0",
+      "path": "azure.storage.common/12.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.common.12.8.0.nupkg.sha512",
+        "azure.storage.common.12.12.0.nupkg.sha512",
         "azure.storage.common.nuspec",
+        "azureicon.png",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
-        "lib/netstandard2.0/Azure.Storage.Common.xml",
-        "pkgicon.png"
+        "lib/netstandard2.0/Azure.Storage.Common.xml"
       ]
     },
-    "Azure.Storage.Queues/12.7.0": {
-      "sha512": "SMo+h0/mvSHRXRbQWX7vIUuGgjK+Oe3EEDxDWZfSy7oshSPSwd5BpvKRhtX0Phx4JhTfYpv7dxD+HSsNEIQDng==",
+    "Azure.Storage.Queues/12.11.0": {
+      "sha512": "qpe1Gs1/2t18FoZORF3TgPTaF31RJhN5DQFgZ6ay6qKak9IztaqwKG8Lv2eZ/yhRKJNrOVnaZF4iqf7a4N57BA==",
       "type": "package",
-      "path": "azure.storage.queues/12.7.0",
+      "path": "azure.storage.queues/12.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.queues.12.7.0.nupkg.sha512",
+        "azure.storage.queues.12.11.0.nupkg.sha512",
         "azure.storage.queues.nuspec",
+        "azureicon.png",
         "lib/netstandard2.0/Azure.Storage.Queues.dll",
         "lib/netstandard2.0/Azure.Storage.Queues.xml",
-        "pkgicon.png"
+        "lib/netstandard2.1/Azure.Storage.Queues.dll",
+        "lib/netstandard2.1/Azure.Storage.Queues.xml"
       ]
     },
     "BouncyCastle.Cryptography/2.4.0": {
@@ -6816,17 +6883,45 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
-    "DotNetNuke.Core/7.4.0.353": {
-      "sha512": "tT/EF5omiP2xNBW5xMyqLYqaI+VzFl+EYPwfKkgqmcpLdEzEf0z3OWa32bTt6VAVeaK/TWwIJE5+K2CauMV+8g==",
+    "DotNetNuke.Core/10.0.1": {
+      "sha512": "lBsdhpUVK1PoSCXLxCj/44T/POlcVpRo/EkaS1DTXvrAI1cy7nM4c47otcmHnzNB33qwFmaA22iRiCPqd6eYxw==",
       "type": "package",
-      "path": "dotnetnuke.core/7.4.0.353",
+      "path": "dotnetnuke.core/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnetnuke.core.7.4.0.353.nupkg.sha512",
+        "dotnetnuke.core.10.0.1.nupkg.sha512",
         "dotnetnuke.core.nuspec",
-        "lib/net40/DotNetNuke.dll",
-        "lib/net40/Microsoft.ApplicationBlocks.Data.dll"
+        "images/logo-for-nuget.png",
+        "lib/net48/DotNetNuke.dll",
+        "lib/net48/Microsoft.ApplicationBlocks.Data.dll"
+      ]
+    },
+    "DotNetNuke.DependencyInjection/10.0.1": {
+      "sha512": "jq8TRe44dQnjFJfeyxibYryhwTxNh1UrBhi2rfkHwzjEk+OX/26SZJ5dDTSRjrjeW3MYKkkMBZrswA0AfogcOA==",
+      "type": "package",
+      "path": "dotnetnuke.dependencyinjection/10.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetnuke.dependencyinjection.10.0.1.nupkg.sha512",
+        "dotnetnuke.dependencyinjection.nuspec",
+        "images/logo-for-nuget.png",
+        "lib/netstandard2.0/DotNetNuke.DependencyInjection.dll"
+      ]
+    },
+    "DotNetNuke.Instrumentation/10.0.1": {
+      "sha512": "V26tTslXI93a7GY7unbB6DpQg2gQbaD7OSmzSFgzbDTqgm3xwiKcqoDbJjQ/rVUDfslPwaJAFUrktPDpIJnNmQ==",
+      "type": "package",
+      "path": "dotnetnuke.instrumentation/10.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetnuke.instrumentation.10.0.1.nupkg.sha512",
+        "dotnetnuke.instrumentation.nuspec",
+        "images/logo-for-nuget.png",
+        "lib/net48/DotNetNuke.Instrumentation.dll",
+        "lib/net48/DotNetNuke.Log4Net.dll"
       ]
     },
     "EntityFramework/6.2.0": {
@@ -7447,16 +7542,16 @@
         "microsoft.aspnet.identity.entityframework.nuspec"
       ]
     },
-    "Microsoft.AspNet.Identity.Owin/2.2.2": {
-      "sha512": "oZ+whh1KqOmX/ODPy2gXmgDF3vq0bg1NX1Jsr07+DTtOn/3xh6PCPouNPMhNrVRHfe3E7zPdTUnagnHNr1zUXQ==",
+    "Microsoft.AspNet.Identity.Owin/2.2.4": {
+      "sha512": "u3SmsjXT/43Xas/xJx4Mz9FImMxfxz9npmFLXRDc8j7Ni3vkoRNK9zryx3i60WVPIxnVlJsJcCe6PaBuPJJscw==",
       "type": "package",
-      "path": "microsoft.aspnet.identity.owin/2.2.2",
+      "path": "microsoft.aspnet.identity.owin/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Microsoft.AspNet.Identity.Owin.dll",
         "lib/net45/Microsoft.AspNet.Identity.Owin.xml",
-        "microsoft.aspnet.identity.owin.2.2.2.nupkg.sha512",
+        "microsoft.aspnet.identity.owin.2.2.4.nupkg.sha512",
         "microsoft.aspnet.identity.owin.nuspec"
       ]
     },
@@ -8514,38 +8609,68 @@
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.9": {
-      "sha512": "ORqfrAACcvTInie1oGola5uky344/PiNfgayTPuZWV4WnSfIQZJQm/ZLpGshJE3h7TqwYaYElGazK/yaM2bFLA==",
+    "Microsoft.Extensions.DependencyInjection/8.0.0": {
+      "sha512": "V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.9",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.9.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec"
+        "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.9": {
-      "sha512": "8PkcaPwiTPOhqshoY4+rQUbz86X6YpLDLUqXOezh7L2A3pgpBmeBBByYIffofBlvQxDdQ0zB2DkWjbZWyCxRWg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "sha512": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.9",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/3.1.8": {
@@ -8931,17 +9056,18 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.NETCore.Platforms/3.0.0": {
-      "sha512": "TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+    "Microsoft.NETCore.Platforms/5.0.4": {
+      "sha512": "S/AHu+d3Fk/yoWHIXNAs8N030bCf22GlXoMqLC/zK24i+VfhG0kWYtFeEv6s07b05qchNEGabwOcq49zzR8MPA==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/3.0.0",
+      "path": "microsoft.netcore.platforms/5.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.3.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.5.0.4.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -9043,34 +9169,34 @@
         "microsoft.owin.security.oauth.nuspec"
       ]
     },
-    "Microsoft.PowerShell.CoreCLR.Eventing/6.1.0": {
-      "sha512": "zZbpEKy/ogCphG5VCPXFWup3PT0NXqQjoOttssH5xhICVdgb4v73TOdfku920LVto8JHeISYs6SGEtyQ/f/AmQ==",
+    "Microsoft.PowerShell.CoreCLR.Eventing/6.1.6": {
+      "sha512": "PC/URtLAqMVpJBGs/Jyw5GrEf8lqocjpQcPjek9CCrPh3qyVjCkNg8wCIwXAMvRcZXyg7GnGQAZrvQDlVHcuQQ==",
       "type": "package",
-      "path": "microsoft.powershell.coreclr.eventing/6.1.0",
+      "path": "microsoft.powershell.coreclr.eventing/6.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "microsoft.powershell.coreclr.eventing.6.1.0.nupkg.sha512",
+        "microsoft.powershell.coreclr.eventing.6.1.6.nupkg.sha512",
         "microsoft.powershell.coreclr.eventing.nuspec",
-        "ref/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/linux-arm/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/linux-x64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/osx/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/win-arm/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/win-arm64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/win-x64/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
-        "runtimes/win-x86/lib/netstandard2.0/Microsoft.PowerShell.CoreCLR.Eventing.dll"
+        "ref/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/linux-arm/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/linux-x64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/osx/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/win-arm/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/win-arm64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/win-x64/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll",
+        "runtimes/win-x86/lib/netcoreapp2.1/Microsoft.PowerShell.CoreCLR.Eventing.dll"
       ]
     },
-    "Microsoft.PowerShell.Native/6.1.0-rc.1": {
-      "sha512": "9veUQuLLJhhCIsiA7yGciY3sHl3hNAzLnN6YilScq/7VM6dkCU3oUXxup8SU+Uhco7ZXXyV4NBx6m1j8FqUayg==",
+    "Microsoft.PowerShell.Native/6.1.0": {
+      "sha512": "I43FuJWW71Wvv1nMxSAILHSmslZpO4InUsA9k+koZHoPXlS7dsfFhAwfCPOqk3dXsikIv9+kj8f27gBicjcvjg==",
       "type": "package",
-      "path": "microsoft.powershell.native/6.1.0-rc.1",
+      "path": "microsoft.powershell.native/6.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "PSRP_version.txt",
-        "microsoft.powershell.native.6.1.0-rc.1.nupkg.sha512",
+        "microsoft.powershell.native.6.1.0.nupkg.sha512",
         "microsoft.powershell.native.nuspec",
         "runtimes/linux-arm/native/libpsl-native.so",
         "runtimes/linux-x64/native/libmi.so",
@@ -9981,10 +10107,10 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "NHibernate/5.2.6": {
-      "sha512": "fsRZPLgwrYy6ta2+FmxjUx20a7h0uUk5tIyVFEKAYSY7BG0Qax1lGjfspxchFn9h9gkp1zqQEWNGJoo/RaVmlg==",
+    "NHibernate/5.4.9": {
+      "sha512": "H78ypzh1T+D2BJDQRd/IYIICplspq/s8x5YhnkXFlcIhmAH0RHIMjjqiJCXSwC+gOqBKRMsmtVvkaCXZHqd76w==",
       "type": "package",
-      "path": "nhibernate/5.2.6",
+      "path": "nhibernate/5.4.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -10000,18 +10126,25 @@
         "ConfigurationTemplates/SqlServerCe.cfg.xml",
         "ConfigurationTemplates/SybaseASE.cfg.xml",
         "ConfigurationTemplates/SybaseSQLAnywhere.cfg.xml",
+        "NHibernate-NuGet.png",
         "NHibernate.license.txt",
         "NHibernate.readme.md",
         "NHibernate.releasenotes.txt",
         "lib/net461/NHibernate.dll",
         "lib/net461/NHibernate.xml",
+        "lib/net48/NHibernate.dll",
+        "lib/net48/NHibernate.xml",
+        "lib/net6.0/NHibernate.dll",
+        "lib/net6.0/NHibernate.xml",
         "lib/netcoreapp2.0/NHibernate.dll",
         "lib/netcoreapp2.0/NHibernate.xml",
         "lib/netstandard2.0/NHibernate.dll",
         "lib/netstandard2.0/NHibernate.xml",
+        "lib/netstandard2.1/NHibernate.dll",
+        "lib/netstandard2.1/NHibernate.xml",
         "nhibernate-configuration.xsd",
         "nhibernate-mapping.xsd",
-        "nhibernate.5.2.6.nupkg.sha512",
+        "nhibernate.5.4.9.nupkg.sha512",
         "nhibernate.nuspec"
       ]
     },
@@ -11279,16 +11412,16 @@
         "runtime.native.system.nuspec"
       ]
     },
-    "runtime.native.System.Data.SqlClient.sni/4.5.0": {
-      "sha512": "AJfX7owAAkMjWQYhoml5IBfXh8UyYPjktn8pK0BFGAdKgBS7HqMz1fw5vdzfZUWfhtTPDGCjgNttt46ZyEmSjg==",
+    "runtime.native.System.Data.SqlClient.sni/4.7.0": {
+      "sha512": "9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
       "type": "package",
-      "path": "runtime.native.system.data.sqlclient.sni/4.5.0",
+      "path": "runtime.native.system.data.sqlclient.sni/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "runtime.native.system.data.sqlclient.sni.4.5.0.nupkg.sha512",
+        "runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
         "runtime.native.system.data.sqlclient.sni.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12285,13 +12418,14 @@
         "system.data.hashfunction.interfaces.nuspec"
       ]
     },
-    "System.Data.SqlClient/4.6.1": {
-      "sha512": "7MTJhBFt4/tSJ2VRpG+TQNPcDdbCnWuoYzbe0kD5O3mQ7aZ2Q+Q3D9Y5Y3/aper5Gp3Lrs+8edk9clvxyPYXPw==",
+    "System.Data.SqlClient/4.8.6": {
+      "sha512": "2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "type": "package",
-      "path": "system.data.sqlclient/4.6.1",
+      "path": "system.data.sqlclient/4.8.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -12299,10 +12433,15 @@
         "lib/net451/System.Data.SqlClient.dll",
         "lib/net46/System.Data.SqlClient.dll",
         "lib/net461/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.xml",
         "lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "lib/netcoreapp2.1/System.Data.SqlClient.xml",
         "lib/netstandard1.2/System.Data.SqlClient.dll",
+        "lib/netstandard1.2/System.Data.SqlClient.xml",
         "lib/netstandard1.3/System.Data.SqlClient.dll",
+        "lib/netstandard1.3/System.Data.SqlClient.xml",
         "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -12344,16 +12483,22 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.xml",
         "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
         "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/net451/System.Data.SqlClient.dll",
         "runtimes/win/lib/net46/System.Data.SqlClient.dll",
         "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.xml",
         "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.xml",
         "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
-        "system.data.sqlclient.4.6.1.nupkg.sha512",
+        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
+        "system.data.sqlclient.4.8.6.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12907,23 +13052,30 @@
         "version.txt"
       ]
     },
-    "System.DirectoryServices.Protocols/4.5.0": {
-      "sha512": "EpWC9CW2GdFiWzhWEIcXX8tMPGRdrpL+1BI4WyBYG4G1TlOuMXO3bpyLydEo5/3ThDFPzWfp0Yp0u360dGwvJQ==",
+    "System.DirectoryServices.Protocols/5.0.1": {
+      "sha512": "rqSmdHgoYL8RghMsYcwtzNWKbXdT9wHwYDIDcd9TQkRLO/ptF1Op/BTiBc/AbducFCS/PMcqpttXuzw2hp4Iyg==",
       "type": "package",
-      "path": "system.directoryservices.protocols/4.5.0",
+      "path": "system.directoryservices.protocols/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net45/_._",
         "lib/netstandard2.0/System.DirectoryServices.Protocols.dll",
+        "lib/netstandard2.0/System.DirectoryServices.Protocols.xml",
         "ref/net45/_._",
         "ref/netstandard2.0/System.DirectoryServices.Protocols.dll",
         "ref/netstandard2.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/linux/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/linux/lib/netcoreapp2.0/System.DirectoryServices.Protocols.xml",
+        "runtimes/osx/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll",
+        "runtimes/osx/lib/netcoreapp2.0/System.DirectoryServices.Protocols.xml",
         "runtimes/win/lib/net45/_._",
         "runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.Protocols.dll",
-        "system.directoryservices.protocols.4.5.0.nupkg.sha512",
+        "runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.Protocols.xml",
+        "system.directoryservices.protocols.5.0.1.nupkg.sha512",
         "system.directoryservices.protocols.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13547,6 +13699,29 @@
         "system.io.filesystem.watcher.nuspec"
       ]
     },
+    "System.IO.Hashing/6.0.0": {
+      "sha512": "Rfm2jYCaUeGysFEZjDe7j1R4x6Z6BzumS/vUT5a1AA/AWJuGX71PoGB0RmpyX3VmrGqVnAwtfMn39OHR8Y/5+g==",
+      "type": "package",
+      "path": "system.io.hashing/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.IO.Hashing.dll",
+        "lib/net461/System.IO.Hashing.xml",
+        "lib/net6.0/System.IO.Hashing.dll",
+        "lib/net6.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.6.0.0.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Packaging/4.7.0": {
       "sha512": "9VV4KAbgRQZ79iEoG40KIeZy38O30oWwewScAST879+oki8g/Wa2HXZQgrhDDxQM4GkP1PnRJll05NMiVPbYAw==",
       "type": "package",
@@ -13879,22 +14054,22 @@
         "version.txt"
       ]
     },
-    "System.Management.Automation/6.1.0": {
-      "sha512": "aYRjMUp7MYxs7UcldGtQjZ98BkSTR0M2LH3l4A7C6tJgi9c0M0eo57pVMsefTySmaRIje+3FNoajGkfEJIGMzg==",
+    "System.Management.Automation/6.1.6": {
+      "sha512": "OEWVu3JvDK5f8WUFjQXzgx2v+IKNphvmdSagMOHgONcQabiOapmrXv+8ihSe95qUgYdqY8tuvEAK99xjiEIa9w==",
       "type": "package",
-      "path": "system.management.automation/6.1.0",
+      "path": "system.management.automation/6.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ref/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/linux-arm/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/linux-x64/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/osx/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/win-arm/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/win-arm64/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/win-x64/lib/netstandard2.0/System.Management.Automation.dll",
-        "runtimes/win-x86/lib/netstandard2.0/System.Management.Automation.dll",
-        "system.management.automation.6.1.0.nupkg.sha512",
+        "ref/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/linux-arm/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/linux-x64/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/osx/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/win-arm/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/win-arm64/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/win-x64/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "runtimes/win-x86/lib/netcoreapp2.1/System.Management.Automation.dll",
+        "system.management.automation.6.1.6.nupkg.sha512",
         "system.management.automation.nuspec"
       ]
     },
@@ -17971,12 +18146,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Azure.Storage.Queues >= 12.7.0",
+      "Azure.Storage.Queues >= 12.11.0",
       "EntityFramework >= 6.2.0",
       "FsPickler.Json >= 5.3.2",
       "Microsoft.AspNet.Identity.Core >= 2.2.2",
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.2",
-      "Microsoft.AspNet.Identity.Owin >= 2.2.2",
+      "Microsoft.AspNet.Identity.Owin >= 2.2.4",
       "Microsoft.AspNet.WebApi.Core >= 5.2.7",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.3",
@@ -17985,20 +18160,20 @@
       "Microsoft.SqlServer.SqlManagementObjects >= 150.18147.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
       "Microsoft.Win32.Registry >= 4.5.0",
-      "NHibernate >= 5.2.6",
+      "NHibernate >= 5.4.9",
       "NLog >= 4.6.7",
       "System.CodeDom >= 4.5.0",
-      "System.Data.SqlClient >= 4.6.1",
+      "System.Data.SqlClient >= 4.8.6",
       "System.DirectoryServices >= 4.5.0",
       "System.DirectoryServices.AccountManagement >= 4.5.0",
-      "System.DirectoryServices.Protocols >= 4.5.0",
+      "System.DirectoryServices.Protocols >= 5.0.1",
       "System.Linq.Dynamic >= 1.0.8",
-      "System.Management.Automation >= 6.1.0",
+      "System.Management.Automation >= 6.1.6",
       "System.Runtime.Serialization.Formatters >= 4.3.0",
       "WindowsAzure.Storage >= 9.3.3",
       "Xamarin.Forms >= 4.5.0.617",
       "csla >= 5.5.4",
-      "dotnetnuke.core >= 7.4.0",
+      "dotnetnuke.core >= 10.0.1",
       "fastJSON >= 2.4.0.4",
       "kentico.xperience.libraries >= 13.0.173",
       "log4net >= 2.0.8",
@@ -18012,24 +18187,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/pawel/.nuget/packages/": {}
+    "C:\\Users\\MSTR\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pawel/demo/tmp/dotnet-goof/dotNet-goof.csproj",
+      "projectUniqueName": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
       "projectName": "dotNet-goof",
-      "projectPath": "/Users/pawel/demo/tmp/dotnet-goof/dotNet-goof.csproj",
-      "packagesPath": "/Users/pawel/.nuget/packages/",
-      "outputPath": "/Users/pawel/demo/tmp/dotnet-goof/obj/",
+      "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
+      "packagesPath": "C:\\Users\\MSTR\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/pawel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\MSTR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "http://maven/nexus/repository/itcm_nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -18056,7 +18247,7 @@
         "dependencies": {
           "Azure.Storage.Queues": {
             "target": "Package",
-            "version": "[12.7.0, )"
+            "version": "[12.11.0, )"
           },
           "EntityFramework": {
             "target": "Package",
@@ -18076,7 +18267,7 @@
           },
           "Microsoft.AspNet.Identity.Owin": {
             "target": "Package",
-            "version": "[2.2.2, )"
+            "version": "[2.2.4, )"
           },
           "Microsoft.AspNet.WebApi.Core": {
             "target": "Package",
@@ -18113,7 +18304,7 @@
           },
           "NHibernate": {
             "target": "Package",
-            "version": "[5.2.6, )"
+            "version": "[5.4.9, )"
           },
           "NLog": {
             "target": "Package",
@@ -18125,7 +18316,7 @@
           },
           "System.Data.SqlClient": {
             "target": "Package",
-            "version": "[4.6.1, )"
+            "version": "[4.8.6, )"
           },
           "System.DirectoryServices": {
             "target": "Package",
@@ -18137,7 +18328,7 @@
           },
           "System.DirectoryServices.Protocols": {
             "target": "Package",
-            "version": "[4.5.0, )"
+            "version": "[5.0.1, )"
           },
           "System.Linq.Dynamic": {
             "target": "Package",
@@ -18145,7 +18336,7 @@
           },
           "System.Management.Automation": {
             "target": "Package",
-            "version": "[6.1.0, )"
+            "version": "[6.1.6, )"
           },
           "System.Runtime.Serialization.Formatters": {
             "target": "Package",
@@ -18165,7 +18356,7 @@
           },
           "dotnetnuke.core": {
             "target": "Package",
-            "version": "[7.4.0, )"
+            "version": "[10.0.1, )"
           },
           "fastJSON": {
             "target": "Package",
@@ -18225,11 +18416,15 @@
             "version": "[3.1.10, 3.1.10]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "name": "Microsoft.NETCore.App.Host.win-x64",
             "version": "[3.1.32, 3.1.32]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[3.1.0, 3.1.0]"
           }
         ],
@@ -18241,25 +18436,15 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "dotNet-goof depends on DotNetNuke.Core (>= 7.4.0) but DotNetNuke.Core 7.4.0 was not found. DotNetNuke.Core 7.4.0.353 was resolved instead.",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
       "code": "NU1102",
       "level": "Error",
-      "message": "Unable to find package youtubedlsharp with version (>= 1.2.2)\n  - Found 19 version(s) in nuget.org [ Nearest version: 1.1.2 ]",
+      "message": "Unable to find package youtubedlsharp with version (>= 1.2.2)\r\n  - Found 19 version(s) in nuget.org [ Nearest version: 1.1.2 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages\r\n  - Found 0 version(s) in DevExpress 22.2 Local\r\n  - Found 0 version(s) in C:\\Program Files\\dotnet\\library-packs\r\n  - Found 0 version(s) in Nexus Nykredit NuGet Packages",
       "libraryId": "youtubedlsharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -18268,168 +18453,8 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "Unable to find package opcfoundation.netstandard.opc.ua4. No packages exist with this id in source(s): nuget.org",
+      "message": "Unable to find package opcfoundation.netstandard.opc.ua4. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, DevExpress 22.2 Local, Microsoft Visual Studio Offline Packages, Nexus Nykredit NuGet Packages, nuget.org",
       "libraryId": "opcfoundation.netstandard.opc.ua4",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Azure.Storage.Queues' 12.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-64x4-9hc6-r2h6",
-      "libraryId": "Azure.Storage.Queues",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-3f7v-qx94-666m",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known high severity vulnerability, https://github.com/advisories/GHSA-4qf5-7xc2-wqpg",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-5c66-x4wm-rjfx",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-5whq-j5qg-wjvp",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-79m3-rvx2-3qq9",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-9phr-h5mx-4fp6",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-9w72-2f23-57gm",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known high severity vulnerability, https://github.com/advisories/GHSA-g8j6-m4p7-5rfq",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known high severity vulnerability, https://github.com/advisories/GHSA-j3g9-6fx5-gjv7",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m4hf-fxcg-cp34",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m6w9-8cxc-jff7",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vjcm-j85r-7p68",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known high severity vulnerability, https://github.com/advisories/GHSA-x2rg-fmcv-crq5",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1904",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known critical severity vulnerability, https://github.com/advisories/GHSA-x8f7-h444-97w4",
-      "libraryId": "DotNetNuke.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core' 7.4.0.353 has a known high severity vulnerability, https://github.com/advisories/GHSA-xx3h-j3cx-8qfj",
-      "libraryId": "DotNetNuke.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -18440,16 +18465,6 @@
       "warningLevel": 1,
       "message": "Package 'log4net' 2.0.8 has a known critical severity vulnerability, https://github.com/advisories/GHSA-2cwj-8chv-9pp9",
       "libraryId": "log4net",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Identity.Owin' 2.2.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-25c8-p796-jg6r",
-      "libraryId": "Microsoft.AspNet.Identity.Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -18565,61 +18580,11 @@
       ]
     },
     {
-      "code": "NU1903",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NHibernate' 5.2.6 has a known high severity vulnerability, https://github.com/advisories/GHSA-fg4q-ccq8-3r5q",
-      "libraryId": "NHibernate",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Data.SqlClient' 4.6.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Data.SqlClient' 4.6.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.DirectoryServices.Protocols' 4.5.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-9cxh-gqpx-qc5m",
-      "libraryId": "System.DirectoryServices.Protocols",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Management.Automation' 6.1.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-5frh-8cmj-gc59",
-      "libraryId": "System.Management.Automation",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Management.Automation' 6.1.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-62gw-3rmj-wmp2",
-      "libraryId": "System.Management.Automation",
+      "message": "Package 'DotNetNuke.Core 10.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DotNetNuke.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -18628,8 +18593,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'DotNetNuke.Core 7.4.0.353' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "DotNetNuke.Core",
+      "message": "Package 'DotNetNuke.Instrumentation 10.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DotNetNuke.Instrumentation",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
@@ -18668,7 +18633,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Identity.Owin 2.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.Identity.Owin 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.Identity.Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -18757,16 +18722,7 @@
     {
       "code": "NU1605",
       "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: System.Data.SqlClient from 4.8.6 to 4.6.1. Reference the package directly from the project to select a different version. \n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> System.Data.SqlClient (>= 4.8.6) \n dotNet-goof -> System.Data.SqlClient (>= 4.6.1)",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.Win32.Registry from 4.6.0 to 4.5.0. Reference the package directly from the project to select a different version. \n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> System.Diagnostics.EventLog 4.6.0 -> Microsoft.Win32.Registry (>= 4.6.0) \n dotNet-goof -> Microsoft.Win32.Registry (>= 4.5.0)",
+      "message": "Warning As Error: Detected package downgrade: Microsoft.Win32.Registry from 4.7.0 to 4.5.0. Reference the package directly from the project to select a different version. \r\n dotNet-goof -> System.Data.SqlClient 4.8.6 -> Microsoft.Win32.Registry (>= 4.7.0) \r\n dotNet-goof -> Microsoft.Win32.Registry (>= 4.5.0)",
       "libraryId": "Microsoft.Win32.Registry",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -18775,7 +18731,16 @@
     {
       "code": "NU1605",
       "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: System.Text.Encoding.CodePages from 8.0.0 to 6.0.0. Reference the package directly from the project to select a different version. \n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> MailKit 4.7.1.1 -> MimeKit 4.7.1 -> System.Text.Encoding.CodePages (>= 8.0.0) \n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> System.Text.Encoding.CodePages (>= 6.0.0)",
+      "message": "Warning As Error: Detected package downgrade: Microsoft.AspNet.Identity.Core from 2.2.4 to 2.2.2. Reference the package directly from the project to select a different version. \r\n dotNet-goof -> Microsoft.AspNet.Identity.Owin 2.2.4 -> Microsoft.AspNet.Identity.Core (>= 2.2.4) \r\n dotNet-goof -> Microsoft.AspNet.Identity.Core (>= 2.2.2)",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: System.Text.Encoding.CodePages from 8.0.0 to 6.0.0. Reference the package directly from the project to select a different version. \r\n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> MailKit 4.7.1.1 -> MimeKit 4.7.1 -> System.Text.Encoding.CodePages (>= 8.0.0) \r\n dotNet-goof -> Kentico.Xperience.Libraries 13.0.173 -> System.Text.Encoding.CodePages (>= 6.0.0)",
       "libraryId": "System.Text.Encoding.CodePages",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

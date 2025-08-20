@@ -1,32 +1,43 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pstember/Git/dotNet-goof/dotNet-goof.csproj": {}
+    "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj": {}
   },
   "projects": {
-    "/Users/pstember/Git/dotNet-goof/dotNet-goof.csproj": {
+    "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pstember/Git/dotNet-goof/dotNet-goof.csproj",
+        "projectUniqueName": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
         "projectName": "dotNet-goof",
-        "projectPath": "/Users/pstember/Git/dotNet-goof/dotNet-goof.csproj",
-        "packagesPath": "/Users/pstember/.nuget/packages/",
-        "outputPath": "/Users/pstember/Git/dotNet-goof/obj/",
+        "projectPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\dotNet-goof.csproj",
+        "packagesPath": "C:\\Users\\MSTR\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MSTR\\Snyk\\dotnet-goof-mstr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "/Users/pstember/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\MSTR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://maven/nexus/repository/itcm_nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -34,27 +45,210 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.NETCore.App": {
+            "Azure.Storage.Queues": {
+              "target": "Package",
+              "version": "[12.11.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "FsPickler.Json": {
+              "target": "Package",
+              "version": "[5.3.2, )"
+            },
+            "Microsoft.AspNet.Identity.Core": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNet.Identity.Owin": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.SqlServer.SqlManagementObjects": {
+              "target": "Package",
+              "version": "[150.18147.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.10, )"
+            },
+            "Microsoft.Win32.Registry": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.4.9, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.7, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices.AccountManagement": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices.Protocols": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "System.Linq.Dynamic": {
+              "target": "Package",
+              "version": "[1.0.8, )"
             },
             "System.Management.Automation": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[6.1.6, )"
+            },
+            "System.Runtime.Serialization.Formatters": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.617, )"
+            },
+            "csla": {
+              "target": "Package",
+              "version": "[5.5.4, )"
+            },
+            "dotnetnuke.core": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "fastJSON": {
+              "target": "Package",
+              "version": "[2.4.0.4, )"
+            },
+            "kentico.xperience.libraries": {
+              "target": "Package",
+              "version": "[13.0.173, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            },
+            "microsoft.aspnetcore.app.runtime.linux-x64": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "microsoft.aspnetcore.app.runtime.win-x86": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "opcfoundation.netstandard.opc.ua4": {
+              "target": "Package",
+              "version": "[1.3.352.12, )"
+            },
+            "powershell": {
+              "target": "Package",
+              "version": "[7.2.18, )"
+            },
+            "selenium.webdriver": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
+            "system.runtime.caching": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "youtubedlsharp": {
+              "target": "Package",
+              "version": "[1.2.2, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

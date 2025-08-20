@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Management.Automation" Version="6.1.0" />
+    <PackageReference Include="System.Management.Automation" Version="6.1.6" />
     <PackageReference Include="Azure.Storage.Queues" Version="12.11.0" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="fastJSON" Version="2.4.0.4" />
@@ -25,7 +25,7 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
     <PackageReference Include="System.DirectoryServices" Version="4.5.0" />
     <PackageReference Include="System.DirectoryServices.AccountManagement" Version="4.5.0" />
-    <PackageReference Include="System.DirectoryServices.Protocols" Version="4.5.0" />
+    <PackageReference Include="System.DirectoryServices.Protocols" Version="5.0.1" />
     <PackageReference Include="System.Linq.Dynamic" Version="1.0.8" />
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
@@ -46,7 +46,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="kentico.xperience.libraries" Version="13.0.173" />
     <PackageReference Include="youtubedlsharp" Version="1.2.2" />
-    <PackageReference Include="dotnetnuke.core" Version="7.4.1.280" />
+    <PackageReference Include="dotnetnuke.core" Version="10.0.1" />
     <PackageReference Include="microsoft.aspnetcore.app.runtime.linux-x64" Version="8.0.0" />
     <PackageReference Include="opcfoundation.netstandard.opc.ua4" Version="1.3.352.12" />
     <PackageReference Include="system.runtime.caching" Version="8.0.0" />
